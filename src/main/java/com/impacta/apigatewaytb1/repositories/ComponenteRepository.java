@@ -18,7 +18,7 @@ public interface ComponenteRepository extends JpaRepository<ComponenteModel, UUI
 	@Query("select c from ComponenteModel c where c.codigo like :codigo")
 	public List<ComponenteModel> findByCodigoTodas(String codigo);
 	
-	@Query("select c from ComponenteModel c where c.codigo like :codigo and c.indice = :indice")
+	@Query("select c from ComponenteModel c where c.codigo like %:codigo% and c.indice = :indice")
 	public Optional<ComponenteModel> findByCodigoEIndice(String codigo, Long indice);
 
 	@Query("select c from ComponenteModel c where c.descricao like %:descricao%")

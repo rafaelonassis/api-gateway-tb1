@@ -111,13 +111,9 @@ public class Controller {
 	
 	@GetMapping("/{codigo}/componente/{indice}")
 	public ResponseEntity<Object> getComponente(@PathVariable(value = "codigo") String codigo, @PathVariable(value = "indice") Long indice) {
-		Optional<ComponenteModel> componenteModelOptional = services.findByCodigoComponente(codigo);
-		if (!componenteModelOptional.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Não foi encontrado componente com este codigo de Produto");
-		}
 		Optional<ComponenteModel> componenteModelResponse = services.findByCodigoEIndice(codigo, indice);
 		if (!componenteModelResponse.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Não foi encontrado este indice");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Não foi encontrado este indice e/ou codigo");
 		}
 		
 		return ResponseEntity.status(HttpStatus.OK).body(componenteModelResponse.get());

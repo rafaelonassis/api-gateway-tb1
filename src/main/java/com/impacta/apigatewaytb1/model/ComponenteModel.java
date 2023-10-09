@@ -25,7 +25,7 @@ public class ComponenteModel implements Serializable{
 	private Long indice;
 	@Column(length = 10)
 	private int SKU;
-	@Column(nullable = false, length = 30)
+	@Column(nullable = false)
 	private String descricao;
 	@Column(nullable = false)
 	private double preco;
