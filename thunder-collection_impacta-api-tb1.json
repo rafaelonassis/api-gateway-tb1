@@ -1,0 +1,146 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "impacta-api-tb1",
+    "dateExported": "2023-10-09T04:17:24.025Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "df6c0282-191b-4cf6-b3a9-c703ffae664c",
+            "colId": "84abc366-7ffe-4b7e-8b71-4bbec7dda69a",
+            "containerId": "",
+            "name": "POST produto",
+            "url": "http://localhost:8080/api/v1/produto",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-10-07T03:50:32.207Z",
+            "modified": "2023-10-09T04:04:33.756Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"codigo\": \"12346\",\n  \"nome\": \"Tevevisao\"\n}\n\n//{\n//  \"codigo\": \"12345\",\n//  \"nome\": \"Som\"\n//}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "43834311-1a2b-4996-8b20-8c2723a81744",
+            "colId": "84abc366-7ffe-4b7e-8b71-4bbec7dda69a",
+            "containerId": "",
+            "name": "GET produto {codigo}",
+            "url": "http://localhost:8080/api/v1/produto/12346",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-07T21:31:23.179Z",
+            "modified": "2023-10-07T21:47:32.257Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "263646be-b3f6-4a38-b5b5-62d2fc1fcc33",
+            "colId": "84abc366-7ffe-4b7e-8b71-4bbec7dda69a",
+            "containerId": "",
+            "name": "GET produto",
+            "url": "http://localhost:8080/api/v1/produto",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-10-07T23:13:17.615Z",
+            "modified": "2023-10-07T23:15:13.674Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "12939fac-6fdb-40fd-8520-d213935cc909",
+            "colId": "84abc366-7ffe-4b7e-8b71-4bbec7dda69a",
+            "containerId": "",
+            "name": "POST componente",
+            "url": "http://localhost:8080/api/v1/produto/{codigo}/componente",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-10-07T23:13:46.736Z",
+            "modified": "2023-10-09T04:15:33.153Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "codigo",
+                    "value": "12346",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"codigo\": \"12346\",\n  \"descricao\": \"descricao do produto tv\",\n  \"preco\": 50.00,\n  \"quantidade\": 5,\n  \"indice\": 3\n}\n\n//{\n//  \"codigo\": \"12345\",\n//  \"descricao\": \"descricao do produto do som\",\n//  \"preco\": 30.00,\n//  \"quantidade\": 4,\n//  \"indice\": 2\n//}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2be2fc09-3d22-48b7-ab9c-1e7ecf722a43",
+            "colId": "84abc366-7ffe-4b7e-8b71-4bbec7dda69a",
+            "containerId": "",
+            "name": "GET componente {codigo, indice}",
+            "url": "http://localhost:8080/api/v1/produto/{codigo}/componente/{indice}",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-10-08T04:20:00.098Z",
+            "modified": "2023-10-08T04:20:35.739Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "codigo",
+                    "value": "12346",
+                    "isPath": true
+                },
+                {
+                    "name": "indice",
+                    "value": "1",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "2e45a7ff-e5ea-4c24-84c4-c868bb4ded26",
+            "colId": "84abc366-7ffe-4b7e-8b71-4bbec7dda69a",
+            "containerId": "",
+            "name": "GET componente {codigo}",
+            "url": "http://localhost:8080/api/v1/produto/{codigo}/componente",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-10-08T04:45:33.836Z",
+            "modified": "2023-10-08T05:01:35.628Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "codigo",
+                    "value": "12346",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "d157ed2b-0d78-49e9-8d8b-dd3e126da79e",
+            "colId": "84abc366-7ffe-4b7e-8b71-4bbec7dda69a",
+            "containerId": "",
+            "name": "GET componente {descricao}",
+            "url": "http://localhost:8080/api/v1/produto/componente?descricao=produto",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-10-08T05:09:13.450Z",
+            "modified": "2023-10-09T04:16:52.884Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "descricao",
+                    "value": "produto",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}
